@@ -1,0 +1,29 @@
+[project]
+name = "confguard"
+version = "1.0.0"
+description = "ConfGuard: physics-informed guardrails for agentic AI in predictive maintenance"
+authors = [
+  {name = "Arunkumar V"},
+  {name = "Gangadharan G. R."},
+  {name = "S. Senthilkumar"},
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.0",
+  "numpy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
